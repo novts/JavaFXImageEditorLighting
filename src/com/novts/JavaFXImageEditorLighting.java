@@ -318,9 +318,10 @@ public class JavaFXImageEditorLighting extends Application {
                     widthIm = im.getWidth();
                     heightIm = im.getHeight();
                     if (widthIm > 800){imv.setFitWidth(800);}
-                    if (heightIm > 600){imv.setFitHeight(600);}
+                    if (heightIm > 500){imv.setFitHeight(500);}
                     imv.setPreserveRatio(true);
                     imv.setEffect(effect);
+                    stack.getChildren().clear();
                     stack.getChildren().add(imv);
                     stack.setPadding(new Insets(5,5,5,5));
                     stack.setStyle("-fx-border-color:black; -fx-border-width: 3pt;");
@@ -369,9 +370,10 @@ public class JavaFXImageEditorLighting extends Application {
                             root.getChildren().clear();
                             root.getChildren().addAll(vboxR);
                             if (widthIm > 800){imv.setFitWidth(800);}
-                            if (heightIm > 600){imv.setFitHeight(600);}
+                            if (heightIm > 500){imv.setFitHeight(500);}
                             imv.setPreserveRatio(true);
                             imv.setEffect(effect);
+                            stack.getChildren().clear();
                             stack.getChildren().add(imv);
                             stack.setPadding(new Insets(5,5,5,5));
                             stack.setStyle("-fx-border-color:black; -fx-border-width: 3pt;");
@@ -394,9 +396,10 @@ public class JavaFXImageEditorLighting extends Application {
                         root.getChildren().clear();
                         root.getChildren().addAll(vboxR);
                     if (widthIm > 800){imv.setFitWidth(800);}
-                    if (heightIm > 600){imv.setFitHeight(600);}
+                    if (heightIm > 500){imv.setFitHeight(500);}
                     imv.setPreserveRatio(true);
                     imv.setEffect(effect);
+                    stack.getChildren().clear();
                     stack.getChildren().add(imv);
                     stack.setPadding(new Insets(5,5,5,5));
                     stack.setStyle("-fx-border-color:black; -fx-border-width: 3pt;");
@@ -414,15 +417,15 @@ public class JavaFXImageEditorLighting extends Application {
                 vboxSIm.setLayoutX(820);
                 vboxSIm.setLayoutY(20);
                 vboxSIm.getChildren().addAll(btnSIm,btnB) ;
-                imv.setFitWidth(widthIm);
-                imv.setFitHeight(heightIm);
-                ScrollPane scp = new ScrollPane(imv);
-                scp.setPrefSize(800,500);
+             //   imv.setFitWidth(widthIm);
+             //   imv.setFitHeight(heightIm);
+             //   ScrollPane scp = new ScrollPane(imv);
+             //   scp.setPrefSize(800,500);
             vboxStack.getChildren().clear();
             vboxStack.setSpacing(10);
             vboxStack.setLayoutX(5);
             vboxStack.setLayoutY(5);
-            vboxStack.getChildren().addAll(wv, scp);
+            vboxStack.getChildren().addAll(wv, stack);
                 root.getChildren().addAll(vboxStack, vboxSIm);
             });
 
